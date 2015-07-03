@@ -1,9 +1,9 @@
 from django.test import TestCase
 
-from models import Post
+from models import Recipe
 
 
-class PostTests(TestCase):
+class RecipeTests(TestCase):
 
 	def test_str(self):
 		my_title = Post(name='Title for Test Case')

@@ -3,9 +3,9 @@
 {% load bootstrap_tags %}
 <h2>Add a Recipe</h2>
 {% if form.is_multipart %}
-	<form id="post_form" enctype="multipart/form-data" method="post" action="/blog/add_post/">
+	<form id="post_form" enctype="multipart/form-data" method="post" action="/add_post/">
 {% else %}
-	<form id="post_form" method="post" action="/blog/add_post/">
+	<form id="post_form" method="post" action="/add_post/">
 {% endif %}
 	{% csrf_token %}
 	{{ form | as_bootstrap }}

@@ -11,12 +11,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Post',
+            name='Recipe',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('title', models.CharField(max_length=100)),
-                ('content', models.TextField()),
+                ('name', models.CharField(max_length=100)),
+                ('instructions', models.TextField()),
+                ('tag', models.CharField(max_length=20, null=True, blank=True)),
+                ('image', models.ImageField(null=True, upload_to=b'images', blank=True)),
+                ('views', models.IntegerField(default=0)),
             ],
         ),
     ]

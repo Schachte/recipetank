@@ -6,9 +6,9 @@
 		{% if latest_posts %}
 		<ul>
 		{% for post in latest_posts %}
-		<h3><a href='/blog/{{ post.url }}'>{{ post.name }} </a></h3>
-			<p><em>{{ post.created_at }}</em></p>
-			<p>{{ post.instructions }}</p>
+		<h3><a href='/{{ recipe.url }}'>{{ recipe.name }} </a></h3>
+			<p><em>{{ recipe.created_at }}</em></p>
+			<p>{{ recipe.instructions }}</p>
 		{% endfor %}
 		</ul>
 		{% endif %}
@@ -17,7 +17,7 @@
 		<h4>Popular Recipes:</h4>
 		<ul>
 		{% for popular_post in popular_posts %}
-			<li><a href='/blog/{{ popular_post.url }}'>{{ popular_post.views}} - {{ popular_post.name }}</a></li>
+			<li><a href='/{{ popular_post.url }}'>{{ popular_post.views}} - {{ popular_post.name }}</a></li>
 		{% endfor %}
 		</ul>
 	</div>

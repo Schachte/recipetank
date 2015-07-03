@@ -22,7 +22,7 @@
 		<h4>Popular Recipes:</h4>
 		<ul>
 		{% for popular_post in popular_posts %}
-			<li><a href='/blog/{{ popular_post.url }}'>{{ popular_post.views}} - {{ popular_post.name }}</a></li>
+			<li><a href='/{{ popular_post.url }}'>{{ popular_post.views}} - {{ popular_post.name }}</a></li>
 		{% endfor %}
 		</ul>
 	</div>

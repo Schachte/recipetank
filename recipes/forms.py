@@ -1,9 +1,9 @@
 from django import forms
-from blog.models import Post
+from recipes.models import Recipe
 
 
-class PostForm(forms.ModelForm):
+class RecipeForm(forms.ModelForm):
 
 	class Meta:
-		model = Post
+		model = Recipe
 		fields = ['name', 'instructions', 'tag', 'image']
