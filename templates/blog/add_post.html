@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% block content %}
+{% load bootstrap_tags %}
+<h2>Add a Recipe</h2>
+{% if form.is_multipart %}
+	<form id="post_form" enctype="multipart/form-data" method="post" action="/blog/add_post/">
+{% else %}
+	<form id="post_form" method="post" action="/blog/add_post/">
+{% endif %}
+	{% csrf_token %}
+	{{ form | as_bootstrap }}
+	<input type="submit" name="submit" value="Create Post" class="btn btn-primary">
+</form>
+{% endblock %}

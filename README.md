@@ -1,0 +1,1 @@
+A CRUD app built using Django 1.8.2 and django_forms_bootstrap that allows users to post recipes along with images for them. A side column of popular recipes are shown based on the number of views that they have.

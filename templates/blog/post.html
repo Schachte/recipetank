@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-8">
+		<h2>{{ single_post.name }}</h2>
+		<ul>
+		<p><em>{{ single_post.created_at }}</em></p>
+		<p>{{ single_post.instructions }}</p>
+		<p>Tag: {{ single_post.tag }}</p>
+		<p>Views: {{ single_post.views }}</p>
+		<br/>
+		<p>
+		{% if single_post.image %}
+			<a href="/media/{{ single_post.image }}"><img src="/media/{{ single_post.image }}"></a>
+		{% endif %}
+		</p>
+		</ul>
+		<p>Had enough? Return <a href="/blog">home</a>.</p><br/>
+	</div>
+	<div class="col-md-4">
+		<h4>Popular Recipes:</h4>
+		<ul>
+		{% for popular_post in popular_posts %}
+			<li><a href='/blog/{{ popular_post.url }}'>{{ popular_post.views}} - {{ popular_post.name }}</a></li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+{% endblock %}
