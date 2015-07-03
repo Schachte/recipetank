@@ -5,7 +5,7 @@
 	<div class="col-md-8">
 		{% if latest_posts %}
 		<ul>
-		{% for post in latest_posts %}
+		{% for recipe in latest_posts %}
 		<h3><a href='/{{ recipe.url }}'>{{ recipe.name }} </a></h3>
 			<p><em>{{ recipe.created_at }}</em></p>
 			<p>{{ recipe.instructions }}</p>
