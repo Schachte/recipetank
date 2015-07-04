@@ -1,0 +1,4 @@
+TODO:
+-Account Management
+-PIL integration for indiv. user photos
+-Develop a folder hierarchy for file organization
